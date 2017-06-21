@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            form {
+                background-color: #eee;
+                padding: 20px;
+                margin: 0 auto;
+                width: 540px;
+                font: 16px sans-serif;
+                border-radius: 10px;
+            }
+            .error {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Signup</h1>
+        <form method="post">
+           <table>
+              <tr>
+                 <td><label for="name">Username</label></td>
+                 <td>
+                     <input id ="name" type="text" name = "user" value="{{input_name}}"/>
+                 </td>
+                 <td><div class="error">{{name_error}}</div></td>
+              </tr>
+              <tr>  
+                  <td><label for ="password">Password</label></td>
+                  <td>
+                    <input id = "password" type="password" name="password" value="{{input_pwd}}"/>
+                  </td>
+                  <td><div class="error">{{pwd_error}}</div></td>
+            </tr>
+            <tr>
+                 <td><label for="verify">Verify Password</label></td>
+                 <td>
+                   <input id="verify" type="password" name="verify" value="{{input_verify}}"/>
+                 </td>
+                 <td><div class="error">{{verify_error}}</div></td>
+            </tr>
+            <tr>
+                <td> <label for="email">Email(optional)</label></td>
+                <td>
+                  <input id="email" type="text" name="email" value="{{input_email}}"/>
+                </td>
+                <td><div class="error">{{email_error}}</div></td>
+            </tr>
+            </table>    
+             <input type="submit" value="Submit"/>
+        </form>
+   </body>
+</html>
